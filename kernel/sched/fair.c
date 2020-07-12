@@ -7211,7 +7211,7 @@ static unsigned long cpu_estimated_capacity(int cpu, struct task_struct *p)
 #else
 static unsigned long cpu_estimated_capacity(int cpu, struct task_struct *p)
 {
-	return cpu_util_wake(cpu, p);
+	return cpu_util_without(cpu, p);
 }
 #endif
 
